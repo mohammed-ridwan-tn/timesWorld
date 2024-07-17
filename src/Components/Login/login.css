@@ -1,0 +1,131 @@
+.signup-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.left-container {
+  text-align: left;
+  width: 300px;
+}
+
+.bottom {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.bottom .alternative-text {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 14px;
+  background: #ffff;
+  padding: 0 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left-container h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.left-container .action-buttons {
+  margin-bottom: 16px;
+}
+
+.left-container .action-buttons a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  margin-right: 14px;
+  display: inline-block;
+}
+
+.left-container .action-buttons a.new {
+  color: blue;
+}
+
+.input-component-main {
+  position: relative;
+}
+
+.input-component-main input {
+  width: 100%;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.input-component-main .error {
+  font-size: 12px;
+  color: red;
+  position: relative;
+  bottom: 18px;
+}
+
+.c-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.check-input {
+  width: 30px;
+  height: 30px;
+}
+
+.c-check label {
+  margin-left: 10px;
+}
+
+.b-button {
+  cursor: pointer;
+  width: 100%;
+  padding: 16px 20px;
+  background: #000;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin-bottom: 30px;
+  transition: 0.4s ease-in-out;
+}
+
+.b-button:hover {
+  opacity: 0.8;
+}
+
+.bottom-elements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-elements a {
+  margin-right: 24px;
+  transition: 0.3s ease-in-out;
+}
+
+.bottom-elements a:hover {
+  transform: scale(1.03);
+}
+
+.bottom-elements a:last-child {
+  margin-right: 0;
+}
+
+@media all and (max-width: 768px) {
+  .right-sec {
+    display: none;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .left-container {
+    width: 90%;
+  }
+}
