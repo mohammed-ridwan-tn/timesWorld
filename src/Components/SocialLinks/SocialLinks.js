@@ -1,8 +1,8 @@
 import React from 'react'
-import googleImage from "../../Images/g2.JPG";
-import fbImage from "../../Images/f2.JPG";
-import lnImage from "../../Images/l2.JPG";
-import tweetImage from "../../Images/t2.JPG";
+import googleImage from "../../assest/g2.JPG";
+import fbImage from "../../assest/f2.JPG";
+import lnImage from "../../assest/l2.JPG";
+import tweetImage from "../../assest/t2.JPG";
  
 const SocialLinks = () => {
   return (

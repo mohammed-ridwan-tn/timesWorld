@@ -7,7 +7,6 @@ const Home = () => {
 
   return (
     <div>
-    
       <div className="wrapper">
         <div className="top-header">
           <h3>Countries</h3>
@@ -30,7 +29,6 @@ const Home = () => {
             <div className="container">
               <div className="row">
                 {filterCountries()
-                  ?.slice(0, 20)
                   ?.map((country) => (
                     <div key={country.name} className="country col-md-6 mb-3">
                       <div className="card-item">

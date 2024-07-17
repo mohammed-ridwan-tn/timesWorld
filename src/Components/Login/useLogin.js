@@ -20,8 +20,17 @@ const useLogin = () => {
         .matches(emailRegex, "Please enter a valid email"),
     }),
     onSubmit: (values) => {
-      if (values) {
+      let checkData = {
+        email: values?.email,
+        password: values?.password,
+      };
+      if (
+        checkData?.email == "test@gmail.com" &&
+        checkData?.password == "password"
+      ) {
         navigate("/home");
+      } else {
+        formik.setFieldError("password", "Invalid Credential");
       }
     },
   });

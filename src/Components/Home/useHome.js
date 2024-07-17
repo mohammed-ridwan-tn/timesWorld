@@ -1,31 +1,14 @@
-import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { fetchCountries, setActiveTab } from "../../store/slice/countriesSlice";
 
 const useHome = () => {
-  const [data, SetData] = useState();
-  const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState("All");
-
+  const dispatch = useDispatch();
+  const { data, loading, activeTab } = useSelector((state) => state.countries);
 
   useEffect(() => {
-    const api = async () => {
-      const url = "https://restcountries.com/v2/all?fields=name,region,flag";
-      try {
-        const response = await fetch(url);
-        const json = await response.json();
-        SetData(json);
-
-        setLoading(false);
-      } catch (error) {
-        console.log(error);
-        setLoading(false);
-      }
-    };
-
-    api();
-  }, []);
-
-
-  const tabs = ["All", "Asia", "Europe"];
+    dispatch(fetchCountries());
+  }, [dispatch]);
 
   const filterCountries = () => {
     if (activeTab === "All") {
@@ -34,9 +17,14 @@ const useHome = () => {
     return data.filter((country) => country.region === activeTab);
   };
 
+  const tabs = ["All", "Asia", "Europe"];
 
   return {
-     tabs,loading,activeTab, setActiveTab,filterCountries
+    tabs,
+    loading,
+    activeTab,
+    setActiveTab: (tab) => dispatch(setActiveTab(tab)),
+    filterCountries,
   };
 };
 

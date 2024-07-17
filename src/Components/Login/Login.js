@@ -1,5 +1,5 @@
 import React from "react";
-import signInImage from "../../Images//Cap.PNG";
+import signInImage from "../../assest/Cap.PNG";
 import useLogin from "./useLogin";
 import SocialLinks from "../SocialLinks";
 import "./login.css";
