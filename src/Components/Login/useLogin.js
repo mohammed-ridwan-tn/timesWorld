@@ -25,8 +25,8 @@ const useLogin = () => {
         password: values?.password,
       };
       if (
-        checkData?.email == "test@gmail.com" &&
-        checkData?.password == "password"
+        checkData?.email === "test@gmail.com" &&
+        checkData?.password === "password"
       ) {
         navigate("/home");
       } else {
