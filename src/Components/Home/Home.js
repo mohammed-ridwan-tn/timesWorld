@@ -28,23 +28,22 @@ const Home = () => {
           ) : (
             <div className="container">
               <div className="row">
-                {filterCountries()
-                  ?.map((country) => (
-                    <div key={country.name} className="country col-md-6 mb-3">
-                      <div className="card-item">
-                        <img
-                          src={country.flag}
-                          className="card-img-top"
-                          alt={`${country.name} flag`}
-                          style={{ width: "50px", height: "30px" }}
-                        />
-                        <div className="card-body">
-                          <h5 className="card-title">{country.name}</h5>
-                          <span>Asia</span>
-                        </div>
+                {filterCountries()?.map((country) => (
+                  <div key={country.name} className="country col-md-6 mb-3">
+                    <div className="card-item">
+                      <img
+                        src={country.flag}
+                        className="card-img-top"
+                        alt={`${country.name} flag`}
+                        style={{ width: "50px", height: "30px" }}
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">{country.name}</h5>
+                        <span>Asia</span>
                       </div>
                     </div>
-                  ))}
+                  </div>
+                ))}
               </div>
             </div>
           )}
